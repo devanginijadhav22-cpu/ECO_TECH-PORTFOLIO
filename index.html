@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>ECO-TECH PORTFOLIO — Welcome</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400&amp;family=JetBrains+Mono:wght@500;700&amp;family=Space+Grotesk:wght@600;700&amp;display=swap"
+    rel="stylesheet" />
+  <script src="assets/js/tailwind-config.js"></script>
+  <style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+
+    .technical-grid {
+      background-image:
+        linear-gradient(to right, rgba(71, 85, 105, 0.1) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(71, 85, 105, 0.1) 1px, transparent 1px);
+      background-size: 24px 24px;
+      pointer-events: none;
+    }
+
+    .btn-primary:hover {
+      transform: translateX(2px);
+      box-shadow: -2px 0 0 #00e471, 2px 0 0 #bdf4ff;
+    }
+
+    /* Cyber Scanline & Hologram Animation for Profile Picture */
+    .profile-scan-container {
+      position: relative;
+      overflow: hidden;
+      transition: all 0.5s ease-in-out;
+    }
+
+    .profile-scan-container::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, transparent, #00e471, #00daf3, #ffffff, transparent);
+      box-shadow: 0 0 12px #00e471, 0 0 20px #00daf3;
+      animation: scanline 2.8s ease-in-out infinite;
+      pointer-events: none;
+      z-index: 15;
+    }
+
+    .profile-scan-container::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at center, transparent 70%, rgba(0, 228, 113, 0.15) 100%);
+      pointer-events: none;
+      z-index: 5;
+      transition: opacity 0.5s ease;
+    }
+
+    @keyframes scanline {
+      0% {
+        transform: translateY(-20px);
+        opacity: 0;
+      }
+
+      15% {
+        opacity: 1;
+      }
+
+      85% {
+        opacity: 1;
+      }
+
+      100% {
+        transform: translateY(380px);
+        opacity: 0;
+      }
+    }
+
+    /* Animated Name Effects */
+    .animated-name-glow {
+      background: linear-gradient(135deg, #00e471 0%, #00daf3 50%, #ffffff 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+      animation: pulse-glow 3s ease-in-out infinite alternate;
+    }
+
+    @keyframes pulse-glow {
+      0% {
+        filter: drop-shadow(0 0 4px rgba(0, 228, 113, 0.4));
+      }
+
+      100% {
+        filter: drop-shadow(0 0 16px rgba(0, 218, 243, 0.8));
+      }
+    }
+
+    .typewriter-cursor {
+      display: inline-block;
+      width: 2px;
+      height: 1.1em;
+      background-color: #00e471;
+      margin-left: 2px;
+      vertical-align: middle;
+      animation: blink 0.8s infinite;
+    }
+
+    @keyframes blink {
+      0%,
+      100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+    }
+
+    /* Layout Entrance Animations */
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes floatSlow {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-8px);
+      }
+    }
+
+    .animate-slide-left {
+      animation: slideInLeft 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    .animate-slide-right {
+      animation: slideInRight 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    .animate-float {
+      animation: floatSlow 4s ease-in-out infinite;
+    }
+  </style>
+</head>
+
+<body class="bg-background text-on-background min-h-screen relative font-body-md overflow-x-hidden antialiased"
+  data-page="welcome">
+  <!-- GLOBAL DYNAMIC BACKGROUND STACK -->
+  <div class="fixed inset-0 pointer-events-none z-0">
+    <!-- 1. Background Image Wallpaper -->
+    <div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30 mix-blend-luminosity filter blur-[1px] scale-105" style="background-image: url('assets/img/bg-tech.jpg');"></div>
+    <!-- 2. Dark Gradient Overlay for Readability -->
+    <div class="absolute inset-0 bg-gradient-to-b from-background/90 via-background/80 to-background/95"></div>
+    <!-- 3. Glowing Ambient Orbs -->
+    <div class="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-primary-fixed-dim/15 rounded-full blur-[120px] animate-pulse"></div>
+    <div class="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-secondary-fixed-dim/15 rounded-full blur-[120px] animate-pulse" style="animation-delay: 1.5s;"></div>
+    <!-- 4. Technical Grid Overlay -->
+    <div class="absolute inset-0 technical-grid opacity-60"></div>
+    <!-- 5. Micro Noise Texture -->
+    <div class="absolute inset-0 opacity-[0.03]" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E');"></div>
+  </div>
+
+  <header
+    class="fixed top-0 w-full z-40 bg-surface/80 backdrop-blur-xl border-b border-outline-variant py-4 px-gutter flex justify-between items-center h-[72px]">
+    <a href="index.html"
+      class="font-headline-lg-mobile text-headline-lg-mobile font-bold tracking-tighter text-primary truncate">ECO-TECH
+      PORTFOLIO</a>
+    <button class="text-primary p-2 focus:outline-none focus:ring-1 focus:ring-primary-fixed-dim" id="mobile-menu-btn">
+      <span class="material-symbols-outlined text-[28px]">menu</span>
+    </button>
+  </header>
+
+  <div
+    class="fixed inset-0 bg-surface-container-lowest/95 backdrop-blur-md z-50 transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col pt-[72px] border-l border-outline-variant"
+    id="mobile-menu">
+    <div class="absolute top-4 right-gutter">
+      <button class="text-primary p-2 focus:outline-none" id="close-menu-btn">
+        <span class="material-symbols-outlined text-[28px]">close</span>
+      </button>
+    </div>
+    <nav class="flex-1 flex flex-col px-gutter py-8 space-y-6">
+      <a data-nav-link="welcome"
+        class="text-primary font-bold border-l-4 border-primary pl-4 py-2 font-headline-lg-mobile text-[24px]"
+        href="index.html">Welcome</a>
+      <a data-nav-link="pledge"
+        class="text-on-surface-variant font-medium border-l-4 border-transparent pl-4 py-2 font-headline-lg-mobile text-[24px] hover:text-primary-fixed-dim transition-colors"
+        href="pledge.html">Pledge</a>
+      <a data-nav-link="dashboard"
+        class="text-on-surface-variant font-medium border-l-4 border-transparent pl-4 py-2 font-headline-lg-mobile text-[24px] hover:text-primary-fixed-dim transition-colors"
+        href="dashboard.html">Dashboard</a>
+    </nav>
+    <div class="p-gutter border-t border-outline-variant">
+      <a href="mailto:you@example.com"
+        class="w-full bg-primary-fixed-dim text-on-primary-fixed font-label-sm text-label-sm py-4 rounded-none font-bold tracking-widest uppercase flex items-center justify-center gap-2 btn-primary transition-all duration-200">
+        Contact
+        <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+      </a>
+    </div>
+  </div>
+
+  <main class="relative z-10 pt-[88px] pb-[60px] min-h-[calc(100vh-72px)] flex flex-col justify-center px-4 sm:px-8 max-w-7xl mx-auto w-full">
+    
+    <!-- SYSTEM STATUS HEADER BAR -->
+    <div class="flex justify-between items-center mb-8 border-b border-outline-variant/40 pb-3">
+      <div class="inline-flex items-center gap-2 px-3 py-1 border border-outline-variant bg-surface-container-highest/50 backdrop-blur-sm">
+        <span class="w-2.5 h-2.5 rounded-full bg-primary-fixed-dim animate-pulse"></span>
+        <span class="font-label-sm text-label-sm text-on-surface-variant tracking-widest">SYSTEM ONLINE</span>
+      </div>
+      <div class="font-label-sm text-label-sm text-on-surface-variant border border-outline-variant px-3 py-1 bg-surface-container-highest">
+        SYS.RDY // 01
+      </div>
+    </div>
+
+    <!-- TWO-COLUMN HERO SECTION -->
+    <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center my-auto">
+      
+      <!-- LEFT SIDE: Portfolio Image + Owner Name -->
+      <div class="lg:col-span-5 flex flex-col items-center text-center animate-slide-left">
+        
+        <!-- PROFILE PICTURE CONTAINER WITH CYBER EFFECTS & HOVER HUD -->
+        <div class="relative group mb-6 animate-float">
+          <!-- Multi-layer Glowing Aura -->
+          <div class="absolute -inset-3 bg-gradient-to-r from-[#00e471] via-[#00daf3] to-[#a855f7] rounded-2xl blur-lg opacity-50 group-hover:opacity-100 transition duration-700 animate-pulse"></div>
+          
+          <div class="relative profile-scan-container bg-surface-container border-2 border-primary-fixed-dim/80 p-2 rounded-xl w-52 h-64 sm:w-64 sm:h-80 md:w-72 md:h-96 flex items-center justify-center shadow-[0_0_30px_rgba(0,228,113,0.3)] overflow-hidden transition-transform duration-500 group-hover:scale-[1.02]">
+            
+            <!-- Cyber HUD Corner Brackets -->
+            <div class="absolute top-2 left-2 w-4 h-4 border-t-2 border-l-2 border-[#00e471] z-30 pointer-events-none"></div>
+            <div class="absolute top-2 right-2 w-4 h-4 border-t-2 border-r-2 border-[#00daf3] z-30 pointer-events-none"></div>
+            <div class="absolute bottom-2 left-2 w-4 h-4 border-b-2 border-l-2 border-[#00daf3] z-30 pointer-events-none"></div>
+            <div class="absolute bottom-2 right-2 w-4 h-4 border-b-2 border-r-2 border-[#00e471] z-30 pointer-events-none"></div>
+
+            <img id="user-profile-img" src="assets/img/profile-devangini.jpg?v=2" alt="Devangini Jadhav"
+              class="w-full h-full object-cover object-top rounded-lg border border-outline-variant/80 group-hover:scale-105 group-hover:brightness-105 transition-all duration-500 relative z-10"
+              onerror="this.onerror=null; this.src='assets/img/profile.jpg';" />
+            
+            <!-- Top-Left HUD Badge -->
+            <div class="absolute top-3 left-3 text-[10px] font-label-sm text-primary-fixed-dim bg-background/90 px-2 py-0.5 border border-primary-fixed-dim/50 backdrop-blur-md z-30 flex items-center gap-1.5 shadow-md">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#00e471] animate-ping"></span>
+              SYS.ID // DEVANGINI
+            </div>
+
+            <!-- Bottom-Right HUD Badge -->
+            <div class="absolute bottom-3 right-3 text-[10px] font-label-sm text-secondary-fixed-dim bg-background/90 px-2 py-0.5 border border-secondary-fixed-dim/50 backdrop-blur-md z-30 shadow-md">
+              STATUS // SPEAKER & LEAD
+            </div>
+          </div>
+        </div>
+
+        <!-- ANIMATED OWNER NAME BOX -->
+        <div class="w-full max-w-[360px] border border-outline-variant/60 bg-surface-container-low/90 p-4 rounded-lg backdrop-blur-md shadow-xl border-l-4 border-l-primary-fixed-dim transition-all duration-300 hover:border-outline">
+          <div class="text-[10px] font-label-sm text-on-surface-variant uppercase tracking-widest mb-1.5 flex items-center justify-center gap-1.5">
+            <span class="material-symbols-outlined text-[16px] text-primary-fixed-dim">account_circle</span>
+            PORTFOLIO OWNER
+          </div>
+          <div class="font-headline-lg text-[22px] sm:text-[26px] font-bold tracking-tight text-primary flex items-center justify-center min-h-[38px]">
+            <span id="animated-name-text" class="animated-name-glow">DEVANGINI JADHAV</span>
+            <span class="typewriter-cursor"></span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT SIDE: Protocols, Descriptions, CTAs & Diagnostics -->
+      <div class="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left animate-slide-right">
+        
+        <h1 class="font-headline-lg-mobile text-[32px] sm:text-[42px] md:text-[48px] font-bold text-primary mb-4 leading-[1.1] tracking-tight drop-shadow-[0_0_12px_rgba(0,228,113,0.25)]">
+          ECOLOGICAL<br class="hidden sm:inline" />
+          <span class="text-white">RECOVERY</span><br class="hidden sm:inline" />
+          <span class="text-secondary-fixed-dim">PROTOCOL</span>
+        </h1>
+        
+        <p class="font-body-md text-body-md sm:text-[17px] text-on-surface-variant mb-8 max-w-[540px] opacity-90 leading-relaxed">
+          Activating digital responsibility. Mitigating e-waste through precision analytics, material recovery tracking, and activist-driven technical interventions.
+        </p>
+
+        <!-- ACTION BUTTONS -->
+        <div class="flex flex-col sm:flex-row items-center gap-4 w-full max-w-[480px] mb-8">
+          <a href="dashboard.html"
+            class="w-full sm:flex-1 bg-primary-fixed-dim text-on-primary-fixed font-label-sm text-label-sm py-4 px-6 rounded-none font-bold tracking-widest uppercase flex items-center justify-center gap-3 btn-primary transition-all duration-300 relative overflow-hidden group shadow-lg">
+            <span class="relative z-10">Initiate Protocol</span>
+            <span class="material-symbols-outlined text-[20px] relative z-10">power_settings_new</span>
+            <div class="absolute inset-0 bg-[linear-gradient(transparent_50%,rgba(0,0,0,0.15)_50%)] bg-[length:100%_4px] opacity-0 group-hover:opacity-100 transition-opacity z-0"></div>
+          </a>
+
+          <a href="dashboard.html"
+            class="w-full sm:w-auto border border-outline-variant bg-surface-container-highest/60 hover:bg-surface-container-highest text-primary font-label-sm text-label-sm py-4 px-6 rounded-none font-bold tracking-widest uppercase flex items-center justify-center gap-2 transition-all duration-300">
+            <span>View Data Feed</span>
+            <span class="material-symbols-outlined text-[18px]">readiness_score</span>
+          </a>
+        </div>
+
+        <!-- DIAGNOSTICS CARD -->
+        <div class="w-full max-w-[480px] border border-slate-800 bg-surface-container/90 p-4 relative border-l-4 border-l-secondary-fixed-dim shadow-lg">
+          <div class="absolute top-0 right-0 font-label-sm text-label-sm text-on-surface-variant p-2 opacity-50">DIAG_01</div>
+          <div class="font-data-display text-[15px] text-primary mb-2 flex items-center gap-2 font-bold">
+            <span class="material-symbols-outlined text-[18px] text-secondary-fixed-dim animate-spin" style="animation-duration: 8s;">sensors</span>
+            SYSTEM STATUS: OPTIMAL
+          </div>
+          <div class="h-1.5 w-full bg-surface-container-highest mt-3 relative overflow-hidden rounded-full">
+            <div class="absolute top-0 left-0 h-full bg-gradient-to-r from-primary-fixed-dim to-secondary-fixed-dim w-[78%] animate-[pulse_2s_ease-in-out_infinite]"></div>
+          </div>
+          <div class="flex justify-between mt-2.5 font-label-sm text-label-sm text-on-surface-variant font-medium">
+            <span>RECOVERY CAPACITY</span>
+            <span class="text-secondary-fixed-dim font-bold">78.0%</span>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+  </main>
+
+  <script src="assets/js/site.js"></script>
+</body>
+
+</html>

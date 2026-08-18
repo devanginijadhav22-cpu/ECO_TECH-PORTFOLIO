@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ECO-TECH PORTFOLIO — Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&amp;family=JetBrains+Mono:wght@500;700&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<script src="assets/js/tailwind-config.js"></script>
+<style>
+  body { min-height: max(884px, 100dvh); }
+  .technical-grid {
+    background-image:
+      linear-gradient(to right, rgba(71, 85, 105, 0.1) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(71, 85, 105, 0.1) 1px, transparent 1px);
+    background-size: 24px 24px;
+    pointer-events: none;
+  }
+  .btn-primary:hover {
+    transform: translateX(2px);
+    box-shadow: -2px 0 0 #00e471, 2px 0 0 #bdf4ff;
+  }
+</style>
+</head>
+<body class="bg-background text-on-background min-h-screen relative font-body-md overflow-x-hidden antialiased" data-page="dashboard">
+  <!-- GLOBAL DYNAMIC BACKGROUND STACK -->
+  <div class="fixed inset-0 pointer-events-none z-0">
+    <!-- 1. Background Image Wallpaper -->
+    <div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30 mix-blend-luminosity filter blur-[1px] scale-105" style="background-image: url('assets/img/bg-tech.jpg');"></div>
+    <!-- 2. Dark Gradient Overlay for Readability -->
+    <div class="absolute inset-0 bg-gradient-to-b from-background/90 via-background/80 to-background/95"></div>
+    <!-- 3. Glowing Ambient Orbs -->
+    <div class="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-primary-fixed-dim/15 rounded-full blur-[120px] animate-pulse"></div>
+    <div class="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-secondary-fixed-dim/15 rounded-full blur-[120px] animate-pulse" style="animation-delay: 1.5s;"></div>
+    <!-- 4. Technical Grid Overlay -->
+    <div class="absolute inset-0 technical-grid opacity-60"></div>
+    <!-- 5. Micro Noise Texture -->
+    <div class="absolute inset-0 opacity-[0.03]" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E');"></div>
+  </div>
+
+<header class="fixed top-0 w-full z-40 bg-surface/80 backdrop-blur-xl border-b border-outline-variant py-4 px-gutter flex justify-between items-center h-[72px]">
+  <a href="index.html" class="font-headline-lg-mobile text-headline-lg-mobile font-bold tracking-tighter text-primary truncate">ECO-TECH PORTFOLIO</a>
+  <button class="text-primary p-2 focus:outline-none focus:ring-1 focus:ring-primary-fixed-dim" id="mobile-menu-btn">
+    <span class="material-symbols-outlined text-[28px]">menu</span>
+  </button>
+</header>
+
+<div class="fixed inset-0 bg-surface-container-lowest/95 backdrop-blur-md z-50 transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col pt-[72px] border-l border-outline-variant" id="mobile-menu">
+  <div class="absolute top-4 right-gutter">
+    <button class="text-primary p-2 focus:outline-none" id="close-menu-btn">
+      <span class="material-symbols-outlined text-[28px]">close</span>
+    </button>
+  </div>
+  <nav class="flex-1 flex flex-col px-gutter py-8 space-y-6">
+    <a data-nav-link="welcome" class="text-on-surface-variant font-medium border-l-4 border-transparent pl-4 py-2 font-headline-lg-mobile text-[24px] hover:text-primary-fixed-dim transition-colors" href="index.html">Welcome</a>
+    <a data-nav-link="pledge" class="text-on-surface-variant font-medium border-l-4 border-transparent pl-4 py-2 font-headline-lg-mobile text-[24px] hover:text-primary-fixed-dim transition-colors" href="pledge.html">Pledge</a>
+    <a data-nav-link="dashboard" class="text-primary font-bold border-l-4 border-primary pl-4 py-2 font-headline-lg-mobile text-[24px]" href="dashboard.html">Dashboard</a>
+  </nav>
+  <div class="p-gutter border-t border-outline-variant">
+    <a href="mailto:you@example.com" class="w-full bg-primary-fixed-dim text-on-primary-fixed font-label-sm text-label-sm py-4 rounded-none font-bold tracking-widest uppercase flex items-center justify-center gap-2 btn-primary transition-all duration-200">
+      Contact
+      <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+    </a>
+  </div>
+</div>
+
+<main class="relative z-10 pt-[96px] pb-[80px] min-h-screen flex flex-col px-margin-mobile">
+  <div class="mb-8 inline-flex items-center gap-2 px-3 py-1 border border-outline-variant bg-surface-container-highest/50 backdrop-blur-sm self-start">
+    <span class="font-label-sm text-label-sm text-on-surface-variant tracking-widest">DOC.03 // DASHBOARD</span>
+  </div>
+
+  <h1 class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-primary mb-6 leading-tight">
+    ASSIGNMENT<br/><span class="text-secondary-fixed-dim">LOG</span>
+  </h1>
+
+  <!-- Stats readout -->
+  <div class="grid grid-cols-3 gap-2 mb-8">
+    <div class="border border-slate-800 bg-surface-container p-3 text-center">
+      <div id="stat-total" class="font-data-display text-[24px] text-primary">—</div>
+      <div class="font-label-sm text-label-sm text-on-surface-variant uppercase mt-1">Total</div>
+    </div>
+    <div class="border border-slate-800 bg-surface-container p-3 text-center">
+      <div id="stat-complete" class="font-data-display text-[24px] text-primary-fixed-dim">—</div>
+      <div class="font-label-sm text-label-sm text-on-surface-variant uppercase mt-1">Complete</div>
+    </div>
+    <div class="border border-slate-800 bg-surface-container p-3 text-center">
+      <div id="stat-progress" class="font-data-display text-[24px] text-secondary-fixed-dim">—</div>
+      <div class="font-label-sm text-label-sm text-on-surface-variant uppercase mt-1">Active</div>
+    </div>
+  </div>
+
+  <!-- Assignment cards render here via assets/js/dashboard.js -->
+  <section id="assignments-grid" class="space-y-4 mb-4">
+    <div class="border border-slate-800 bg-surface-container p-4 animate-pulse h-24"></div>
+  </section>
+
+  <div id="assignments-empty" class="hidden border border-dashed border-outline-variant p-6 text-center mb-4">
+    <p class="font-body-md text-body-md text-on-surface-variant">No assignments logged yet. Add one to assets/data/assignments.json.</p>
+  </div>
+
+  <p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider text-center opacity-70">
+    Updated by editing assets/data/assignments.json — see README.md
+  </p>
+</main>
+
+<!-- ASSIGNMENT IMAGE LIGHTBOX MODAL -->
+<div id="assignment-modal" class="fixed inset-0 bg-background/90 backdrop-blur-md z-50 hidden items-center justify-center p-4">
+  <div class="relative max-w-4xl w-full bg-surface-container border border-outline-variant p-4 shadow-2xl flex flex-col items-center">
+    <button id="close-assignment-modal" class="absolute top-3 right-3 text-primary p-2 focus:outline-none hover:text-primary-fixed-dim">
+      <span class="material-symbols-outlined text-[28px]">close</span>
+    </button>
+    <h3 id="assignment-modal-title" class="font-headline-lg-mobile text-[18px] sm:text-[20px] font-bold text-primary mb-4 pr-10 text-center"></h3>
+    <div class="max-h-[80vh] overflow-auto w-full flex justify-center border border-outline-variant/40 bg-surface-container-lowest p-2">
+      <img id="assignment-modal-img" src="" alt="Assignment Image" class="max-w-full max-h-[75vh] object-contain" />
+    </div>
+  </div>
+</div>
+
+<script src="assets/js/site.js"></script>
+<script src="assets/js/dashboard.js"></script>
+</body>
+</html>

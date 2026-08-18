@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ECO-TECH PORTFOLIO — Pledge</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&amp;family=JetBrains+Mono:wght@500;700&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<script src="assets/js/tailwind-config.js"></script>
+<style>
+  body { min-height: max(884px, 100dvh); }
+  .technical-grid {
+    background-image:
+      linear-gradient(to right, rgba(71, 85, 105, 0.1) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(71, 85, 105, 0.1) 1px, transparent 1px);
+    background-size: 24px 24px;
+    pointer-events: none;
+  }
+  .btn-primary:hover {
+    transform: translateX(2px);
+    box-shadow: -2px 0 0 #00e471, 2px 0 0 #bdf4ff;
+  }
+</style>
+</head>
+<body class="bg-background text-on-background min-h-screen relative font-body-md overflow-x-hidden antialiased" data-page="pledge">
+  <!-- GLOBAL DYNAMIC BACKGROUND STACK -->
+  <div class="fixed inset-0 pointer-events-none z-0">
+    <!-- 1. Background Image Wallpaper -->
+    <div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30 mix-blend-luminosity filter blur-[1px] scale-105" style="background-image: url('assets/img/bg-tech.jpg');"></div>
+    <!-- 2. Dark Gradient Overlay for Readability -->
+    <div class="absolute inset-0 bg-gradient-to-b from-background/90 via-background/80 to-background/95"></div>
+    <!-- 3. Glowing Ambient Orbs -->
+    <div class="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-primary-fixed-dim/15 rounded-full blur-[120px] animate-pulse"></div>
+    <div class="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-secondary-fixed-dim/15 rounded-full blur-[120px] animate-pulse" style="animation-delay: 1.5s;"></div>
+    <!-- 4. Technical Grid Overlay -->
+    <div class="absolute inset-0 technical-grid opacity-60"></div>
+    <!-- 5. Micro Noise Texture -->
+    <div class="absolute inset-0 opacity-[0.03]" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E');"></div>
+  </div>
+
+<header class="fixed top-0 w-full z-40 bg-surface/80 backdrop-blur-xl border-b border-outline-variant py-4 px-gutter flex justify-between items-center h-[72px]">
+  <a href="index.html" class="font-headline-lg-mobile text-headline-lg-mobile font-bold tracking-tighter text-primary truncate">ECO-TECH PORTFOLIO</a>
+  <button class="text-primary p-2 focus:outline-none focus:ring-1 focus:ring-primary-fixed-dim" id="mobile-menu-btn">
+    <span class="material-symbols-outlined text-[28px]">menu</span>
+  </button>
+</header>
+
+<div class="fixed inset-0 bg-surface-container-lowest/95 backdrop-blur-md z-50 transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col pt-[72px] border-l border-outline-variant" id="mobile-menu">
+  <div class="absolute top-4 right-gutter">
+    <button class="text-primary p-2 focus:outline-none" id="close-menu-btn">
+      <span class="material-symbols-outlined text-[28px]">close</span>
+    </button>
+  </div>
+  <nav class="flex-1 flex flex-col px-gutter py-8 space-y-6">
+    <a data-nav-link="welcome" class="text-on-surface-variant font-medium border-l-4 border-transparent pl-4 py-2 font-headline-lg-mobile text-[24px] hover:text-primary-fixed-dim transition-colors" href="index.html">Welcome</a>
+    <a data-nav-link="pledge" class="text-primary font-bold border-l-4 border-primary pl-4 py-2 font-headline-lg-mobile text-[24px]" href="pledge.html">Pledge</a>
+    <a data-nav-link="dashboard" class="text-on-surface-variant font-medium border-l-4 border-transparent pl-4 py-2 font-headline-lg-mobile text-[24px] hover:text-primary-fixed-dim transition-colors" href="dashboard.html">Dashboard</a>
+  </nav>
+  <div class="p-gutter border-t border-outline-variant">
+    <a href="mailto:you@example.com" class="w-full bg-primary-fixed-dim text-on-primary-fixed font-label-sm text-label-sm py-4 rounded-none font-bold tracking-widest uppercase flex items-center justify-center gap-2 btn-primary transition-all duration-200">
+      Contact
+      <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+    </a>
+  </div>
+</div>
+
+<main class="relative z-10 pt-[96px] pb-[80px] min-h-screen flex flex-col px-margin-mobile">
+  <div class="mb-8 inline-flex items-center gap-2 px-3 py-1 border border-outline-variant bg-surface-container-highest/50 backdrop-blur-sm self-start">
+    <span class="font-label-sm text-label-sm text-on-surface-variant tracking-widest">DOC.02 // PLEDGE</span>
+  </div>
+
+  <h1 class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-primary mb-6 leading-tight">
+    THE RECOVERY<br/><span class="text-secondary-fixed-dim">PLEDGE</span>
+  </h1>
+  <p class="font-body-md text-body-md text-on-surface-variant mb-10 opacity-90 leading-relaxed">
+    Every device we abandon carries a debt. This is a commitment to pay it down — through the work I ship, the data I publish, and the standard I hold every assignment to.
+  </p>
+
+  <section class="space-y-6 mb-12">
+    <article class="border border-slate-800 bg-surface-container p-4 relative">
+      <div class="absolute top-0 right-0 font-label-sm text-label-sm text-on-surface-variant p-2 opacity-50">01</div>
+      <div class="font-data-display text-[14px] text-primary-fixed-dim mb-2 flex items-center gap-2">
+        <span class="material-symbols-outlined text-[16px]">recycling</span>
+        MEASURE BEFORE I BUILD
+      </div>
+      <p class="font-body-md text-body-md text-on-surface-variant opacity-90">Every project starts from real data on material impact, not assumptions. Precision analytics over guesswork.</p>
+    </article>
+
+    <article class="border border-slate-800 bg-surface-container p-4 relative">
+      <div class="absolute top-0 right-0 font-label-sm text-label-sm text-on-surface-variant p-2 opacity-50">02</div>
+      <div class="font-data-display text-[14px] text-primary-fixed-dim mb-2 flex items-center gap-2">
+        <span class="material-symbols-outlined text-[16px]">visibility</span>
+        PUBLISH THE WORK IN THE OPEN
+      </div>
+      <p class="font-body-md text-body-md text-on-surface-variant opacity-90">Assignments, findings, and prototypes are logged to the Dashboard as they're completed — not polished retroactively.</p>
+    </article>
+
+    <article class="border border-slate-800 bg-surface-container p-4 relative">
+      <div class="absolute top-0 right-0 font-label-sm text-label-sm text-on-surface-variant p-2 opacity-50">03</div>
+      <div class="font-data-display text-[14px] text-primary-fixed-dim mb-2 flex items-center gap-2">
+        <span class="material-symbols-outlined text-[16px]">bolt</span>
+        DESIGN FOR LOW ENERGY
+      </div>
+      <p class="font-body-md text-body-md text-on-surface-variant opacity-90">Dark surfaces, minimal assets, no bloated frameworks. The interface should cost as little as the ideas behind it.</p>
+    </article>
+
+    <article class="border border-slate-800 bg-surface-container p-4 relative">
+      <div class="absolute top-0 right-0 font-label-sm text-label-sm text-on-surface-variant p-2 opacity-50">04</div>
+      <div class="font-data-display text-[14px] text-primary-fixed-dim mb-2 flex items-center gap-2">
+        <span class="material-symbols-outlined text-[16px]">groups</span>
+        TREAT E-WASTE AS EVERYONE'S PROBLEM
+      </div>
+      <p class="font-body-md text-body-md text-on-surface-variant opacity-90">Findings are written for someone outside the field — activism only works if the data is legible.</p>
+    </article>
+
+    <!-- PLEDGE POSTER ADD-ON CARD -->
+    <article class="border border-primary-fixed-dim/40 bg-surface-container p-4 sm:p-6 relative rounded shadow-xl overflow-hidden group transition-all duration-300 hover:border-primary-fixed-dim">
+      <div class="absolute top-0 right-0 font-label-sm text-[10px] sm:text-xs text-primary-fixed-dim px-2.5 py-1 opacity-90 bg-surface-container-highest border-b border-l border-primary-fixed-dim/30 tracking-widest uppercase">
+        ADD-ON // DOCUMENT
+      </div>
+      
+      <div class="font-data-display text-[15px] sm:text-[17px] text-primary mb-1 flex items-center gap-2 pt-2 sm:pt-0">
+        <span class="material-symbols-outlined text-[20px] text-primary-fixed-dim">verified_user</span>
+        MY COMMITMENT TO A SUSTAINABLE FUTURE
+      </div>
+      
+      <p class="font-body-md text-sm text-on-surface-variant opacity-90 mb-4">
+        Signed commitment poster by Devangini Jadhav (Roll No.: 24101C0033).
+      </p>
+
+      <!-- Poster container ensuring 100% full visibility -->
+      <div class="relative w-full max-w-xl mx-auto border border-outline-variant/60 rounded-lg overflow-hidden bg-surface-container-lowest p-2 group-hover:border-primary-fixed-dim/60 transition-colors shadow-inner">
+        <div class="relative cursor-pointer overflow-hidden rounded flex items-center justify-center" id="pledge-poster-trigger">
+          <img 
+            src="assets/img/pledge-poster.jpg" 
+            alt="My Commitment to a Sustainable Future - Signed Pledge Poster" 
+            class="w-full h-auto max-h-[700px] object-contain block mx-auto rounded transition-transform duration-300 group-hover:scale-[1.01]"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-background/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
+            <span class="bg-surface/90 text-primary px-3.5 py-2 rounded-full text-xs font-label-sm flex items-center gap-2 shadow-2xl border border-primary-fixed-dim/60 backdrop-blur-md transform translate-y-2 group-hover:translate-y-0 transition-transform">
+              <span class="material-symbols-outlined text-[18px] text-primary-fixed-dim">zoom_in</span> Click to view full image
+            </span>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <a href="dashboard.html" class="w-full max-w-[320px] mx-auto bg-primary-fixed-dim text-on-primary-fixed font-label-sm text-label-sm py-5 rounded-none font-bold tracking-widest uppercase flex items-center justify-center gap-3 btn-primary transition-all duration-200 relative overflow-hidden group">
+    <span class="relative z-10">See The Work</span>
+    <span class="material-symbols-outlined text-[18px] relative z-10">arrow_forward</span>
+  </a>
+</main>
+
+<!-- FULLSCREEN LIGHTBOX MODAL FOR PLEDGE POSTER -->
+<div id="pledge-modal" class="fixed inset-0 bg-background/95 backdrop-blur-xl z-50 hidden flex-col items-center justify-center p-4 sm:p-6 transition-opacity duration-300">
+  <div class="absolute top-4 right-4 z-50">
+    <button id="close-pledge-modal" class="text-primary hover:text-primary-fixed-dim p-2.5 rounded-full bg-surface-container-highest border border-outline-variant focus:outline-none transition-colors flex items-center justify-center shadow-lg" title="Close">
+      <span class="material-symbols-outlined text-[28px]">close</span>
+    </button>
+  </div>
+  <div class="max-w-4xl max-h-[90vh] w-full flex flex-col items-center justify-center p-2 relative">
+    <img src="assets/img/pledge-poster.jpg" alt="Pledge Poster Full View" class="max-w-full max-h-[82vh] object-contain rounded-lg border border-primary-fixed-dim/50 shadow-[0_0_30px_rgba(0,228,113,0.2)]" />
+    <p class="mt-3 font-label-sm text-xs text-primary-fixed-dim tracking-widest uppercase flex items-center gap-2 bg-surface-container-highest/80 px-3 py-1.5 rounded-full border border-outline-variant">
+      <span class="material-symbols-outlined text-[16px]">verified</span>
+      MY COMMITMENT TO A SUSTAINABLE FUTURE // SIGNED PLEDGE POSTER
+    </p>
+  </div>
+</div>
+
+<script src="assets/js/site.js"></script>
+</body>
+</html>

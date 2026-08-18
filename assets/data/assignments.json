@@ -1,0 +1,24 @@
+[
+  {
+    "id": "A01",
+    "title": "Assignment 1: Crossword",
+    "course": "E-Waste Mastermind",
+    "date": "2026-02-14",
+    "status": "COMPLETE",
+    "tags": ["Crossword", "E-Waste", "Interactive"],
+    "summary": "Completed the E-Waste Mastermind crossword puzzle exploring e-waste terms, recycling practices, and state-wise statistics.",
+    "image": "assets/img/crossword.jpg",
+    "link": ""
+  },
+  {
+    "id": "A02",
+    "title": "Assignment 2: Quiz",
+    "course": "E-Waste Recycling Quiz",
+    "date": "2026-03-02",
+    "status": "COMPLETE",
+    "tags": ["Quiz", "Assessment", "100% Accuracy"],
+    "summary": "Completed the E-waste recycling summary quiz on Wayground, achieving Rank 2/60 with a score of 6900 and 100% accuracy.",
+    "image": "assets/img/quiz.jpg",
+    "link": ""
+  }
+]
