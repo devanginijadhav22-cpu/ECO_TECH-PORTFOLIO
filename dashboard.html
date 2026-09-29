@@ -54,6 +54,7 @@
   </div>
   <nav class="flex-1 flex flex-col px-gutter py-8 space-y-6">
     <a data-nav-link="welcome" class="text-on-surface-variant font-medium border-l-4 border-transparent pl-4 py-2 font-headline-lg-mobile text-[24px] hover:text-primary-fixed-dim transition-colors" href="index.html">Welcome</a>
+    <a data-nav-link="know-me" class="text-on-surface-variant font-medium border-l-4 border-transparent pl-4 py-2 font-headline-lg-mobile text-[24px] hover:text-primary-fixed-dim transition-colors" href="know-me.html">Know Me</a>
     <a data-nav-link="pledge" class="text-on-surface-variant font-medium border-l-4 border-transparent pl-4 py-2 font-headline-lg-mobile text-[24px] hover:text-primary-fixed-dim transition-colors" href="pledge.html">Pledge</a>
     <a data-nav-link="dashboard" class="text-primary font-bold border-l-4 border-primary pl-4 py-2 font-headline-lg-mobile text-[24px]" href="dashboard.html">Dashboard</a>
   </nav>
@@ -65,7 +66,7 @@
   </div>
 </div>
 
-<main class="relative z-10 pt-[96px] pb-[80px] min-h-screen flex flex-col px-margin-mobile">
+<main class="relative z-10 pt-[96px] pb-[80px] min-h-screen flex flex-col px-margin-mobile max-w-5xl mx-auto w-full">
   <div class="mb-8 inline-flex items-center gap-2 px-3 py-1 border border-outline-variant bg-surface-container-highest/50 backdrop-blur-sm self-start">
     <span class="font-label-sm text-label-sm text-on-surface-variant tracking-widest">DOC.03 // DASHBOARD</span>
   </div>
@@ -77,22 +78,446 @@
   <!-- Stats readout -->
   <div class="grid grid-cols-3 gap-2 mb-8">
     <div class="border border-slate-800 bg-surface-container p-3 text-center">
-      <div id="stat-total" class="font-data-display text-[24px] text-primary">—</div>
+      <div id="stat-total" class="font-data-display text-[24px] text-primary">5</div>
       <div class="font-label-sm text-label-sm text-on-surface-variant uppercase mt-1">Total</div>
     </div>
     <div class="border border-slate-800 bg-surface-container p-3 text-center">
-      <div id="stat-complete" class="font-data-display text-[24px] text-primary-fixed-dim">—</div>
+      <div id="stat-complete" class="font-data-display text-[24px] text-primary-fixed-dim">5</div>
       <div class="font-label-sm text-label-sm text-on-surface-variant uppercase mt-1">Complete</div>
     </div>
     <div class="border border-slate-800 bg-surface-container p-3 text-center">
-      <div id="stat-progress" class="font-data-display text-[24px] text-secondary-fixed-dim">—</div>
+      <div id="stat-progress" class="font-data-display text-[24px] text-secondary-fixed-dim">0</div>
       <div class="font-label-sm text-label-sm text-on-surface-variant uppercase mt-1">Active</div>
     </div>
   </div>
 
   <!-- Assignment cards render here via assets/js/dashboard.js -->
   <section id="assignments-grid" class="space-y-4 mb-4">
-    <div class="border border-slate-800 bg-surface-container p-4 animate-pulse h-24"></div>
+
+    <article class="border border-slate-800 bg-surface-container p-4 sm:p-6 relative rounded-none hover:border-outline-variant transition-colors border-l-4 border-l-primary-fixed-dim/30 hover:border-l-primary-fixed-dim shadow-lg">
+      <div class="flex justify-between items-start mb-2">
+        <span class="font-data-display text-[12px] px-2 py-0.5 border text-primary-fixed-dim border-primary-fixed-dim/40 bg-primary-fixed-dim/10 flex items-center gap-1.5 font-bold">
+          <span class="material-symbols-outlined text-[14px]">folder_open</span>
+          COMPLETE
+        </span>
+        <span class="font-label-sm text-label-sm text-on-surface-variant opacity-60 font-bold tracking-widest">A01</span>
+      </div>
+
+      <h3 class="font-headline-lg-mobile text-[20px] sm:text-[24px] font-bold text-primary mb-1 leading-snug">Assignment 1: Crossword</h3>
+      <p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-4">E-Waste Mastermind // Feb 14, 2026</p>
+
+      
+    <div class="mb-4 border border-primary-fixed-dim/30 bg-surface-container-lowest rounded-lg overflow-hidden shadow-inner group relative">
+      <div class="flex items-center justify-between px-3 py-1.5 border-b border-outline-variant/40 bg-surface-container-highest/60">
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-[14px] text-primary-fixed-dim">image</span>
+          <span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-widest">
+            INLINE IMAGE // TASK SUBMISSION
+          </span>
+        </div>
+        <span class="font-label-sm text-[10px] text-primary-fixed-dim/80 uppercase tracking-widest">
+          COMPLETE VIEW
+        </span>
+      </div>
+      <div class="p-2 sm:p-3 flex items-center justify-center bg-surface-container-lowest relative cursor-pointer"
+           onclick="openImageLightbox('assets/img/crossword.jpg', 'Assignment 1: Crossword')">
+        <img
+          src="assets/img/crossword.jpg"
+          alt="Assignment 1: Crossword"
+          class="w-full h-auto max-h-[700px] object-contain block mx-auto rounded transition-transform duration-300 group-hover:scale-[1.01]"
+          loading="lazy"
+        />
+        <div class="absolute inset-0 bg-background/25 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
+          <span class="bg-surface/90 text-primary px-3.5 py-1.5 rounded-full text-xs font-label-sm flex items-center gap-2 shadow-2xl border border-primary-fixed-dim/60 backdrop-blur-md">
+            <span class="material-symbols-outlined text-[16px] text-primary-fixed-dim">zoom_in</span> Click to enlarge
+          </span>
+        </div>
+      </div>
+    </div>
+
+      <p class="font-body-md text-body-md text-on-surface-variant mb-3 opacity-90 leading-relaxed">Completed the E-Waste Mastermind crossword puzzle exploring e-waste terms, recycling practices, and state-wise statistics.</p>
+      <div class="flex flex-wrap gap-2"><span class="font-label-sm text-[11px] uppercase tracking-widest text-on-surface-variant border border-outline-variant px-2 py-0.5 bg-surface-container-low">Crossword</span><span class="font-label-sm text-[11px] uppercase tracking-widest text-on-surface-variant border border-outline-variant px-2 py-0.5 bg-surface-container-low">E-Waste</span><span class="font-label-sm text-[11px] uppercase tracking-widest text-on-surface-variant border border-outline-variant px-2 py-0.5 bg-surface-container-low">Interactive</span></div>
+      
+    </article>
+  
+
+    <article class="border border-slate-800 bg-surface-container p-4 sm:p-6 relative rounded-none hover:border-outline-variant transition-colors border-l-4 border-l-primary-fixed-dim/30 hover:border-l-primary-fixed-dim shadow-lg">
+      <div class="flex justify-between items-start mb-2">
+        <span class="font-data-display text-[12px] px-2 py-0.5 border text-primary-fixed-dim border-primary-fixed-dim/40 bg-primary-fixed-dim/10 flex items-center gap-1.5 font-bold">
+          <span class="material-symbols-outlined text-[14px]">folder_open</span>
+          COMPLETE
+        </span>
+        <span class="font-label-sm text-label-sm text-on-surface-variant opacity-60 font-bold tracking-widest">A02</span>
+      </div>
+
+      <h3 class="font-headline-lg-mobile text-[20px] sm:text-[24px] font-bold text-primary mb-1 leading-snug">Assignment 2: Quiz</h3>
+      <p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-4">E-Waste Recycling Quiz // Mar 02, 2026</p>
+
+      
+    <div class="mb-4 border border-primary-fixed-dim/30 bg-surface-container-lowest rounded-lg overflow-hidden shadow-inner group relative">
+      <div class="flex items-center justify-between px-3 py-1.5 border-b border-outline-variant/40 bg-surface-container-highest/60">
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-[14px] text-primary-fixed-dim">image</span>
+          <span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-widest">
+            INLINE IMAGE // TASK SUBMISSION
+          </span>
+        </div>
+        <span class="font-label-sm text-[10px] text-primary-fixed-dim/80 uppercase tracking-widest">
+          COMPLETE VIEW
+        </span>
+      </div>
+      <div class="p-2 sm:p-3 flex items-center justify-center bg-surface-container-lowest relative cursor-pointer"
+           onclick="openImageLightbox('assets/img/quiz.jpg', 'Assignment 2: Quiz')">
+        <img
+          src="assets/img/quiz.jpg"
+          alt="Assignment 2: Quiz"
+          class="w-full h-auto max-h-[700px] object-contain block mx-auto rounded transition-transform duration-300 group-hover:scale-[1.01]"
+          loading="lazy"
+        />
+        <div class="absolute inset-0 bg-background/25 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
+          <span class="bg-surface/90 text-primary px-3.5 py-1.5 rounded-full text-xs font-label-sm flex items-center gap-2 shadow-2xl border border-primary-fixed-dim/60 backdrop-blur-md">
+            <span class="material-symbols-outlined text-[16px] text-primary-fixed-dim">zoom_in</span> Click to enlarge
+          </span>
+        </div>
+      </div>
+    </div>
+
+      <p class="font-body-md text-body-md text-on-surface-variant mb-3 opacity-90 leading-relaxed">Completed the E-waste recycling summary quiz on Wayground, achieving Rank 2/60 with a score of 6900 and 100% accuracy.</p>
+      <div class="flex flex-wrap gap-2"><span class="font-label-sm text-[11px] uppercase tracking-widest text-on-surface-variant border border-outline-variant px-2 py-0.5 bg-surface-container-low">Quiz</span><span class="font-label-sm text-[11px] uppercase tracking-widest text-on-surface-variant border border-outline-variant px-2 py-0.5 bg-surface-container-low">Assessment</span><span class="font-label-sm text-[11px] uppercase tracking-widest text-on-surface-variant border border-outline-variant px-2 py-0.5 bg-surface-container-low">100% Accuracy</span></div>
+      
+    </article>
+  
+
+    <article class="border border-slate-800 bg-surface-container p-4 sm:p-6 relative rounded-none hover:border-outline-variant transition-colors border-l-4 border-l-primary-fixed-dim/30 hover:border-l-primary-fixed-dim shadow-lg">
+      <div class="flex justify-between items-start mb-2">
+        <span class="font-data-display text-[12px] px-2 py-0.5 border text-primary-fixed-dim border-primary-fixed-dim/40 bg-primary-fixed-dim/10 flex items-center gap-1.5 font-bold">
+          <span class="material-symbols-outlined text-[14px]">folder_open</span>
+          COMPLETE
+        </span>
+        <span class="font-label-sm text-label-sm text-on-surface-variant opacity-60 font-bold tracking-widest">A03</span>
+      </div>
+
+      <h3 class="font-headline-lg-mobile text-[20px] sm:text-[24px] font-bold text-primary mb-1 leading-snug">Assignment 3: Video Task</h3>
+      <p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-4">E-Waste Awareness // Apr 10, 2026</p>
+
+      
+    <div class="mb-4 border border-primary-fixed-dim/30 bg-surface-container-lowest rounded-lg overflow-hidden shadow-inner group relative">
+      <div class="flex items-center justify-between px-3 py-1.5 border-b border-outline-variant/40 bg-surface-container-highest/60">
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-[14px] text-primary-fixed-dim">image</span>
+          <span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-widest">
+            INLINE IMAGE // TASK SUBMISSION
+          </span>
+        </div>
+        <span class="font-label-sm text-[10px] text-primary-fixed-dim/80 uppercase tracking-widest">
+          COMPLETE VIEW
+        </span>
+      </div>
+      <div class="p-2 sm:p-3 flex items-center justify-center bg-surface-container-lowest relative cursor-pointer"
+           onclick="openImageLightbox('assets/img/Video task.jpeg', 'Assignment 3: Video Task')">
+        <img
+          src="assets/img/Video task.jpeg"
+          alt="Assignment 3: Video Task"
+          class="w-full h-auto max-h-[700px] object-contain block mx-auto rounded transition-transform duration-300 group-hover:scale-[1.01]"
+          loading="lazy"
+        />
+        <div class="absolute inset-0 bg-background/25 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
+          <span class="bg-surface/90 text-primary px-3.5 py-1.5 rounded-full text-xs font-label-sm flex items-center gap-2 shadow-2xl border border-primary-fixed-dim/60 backdrop-blur-md">
+            <span class="material-symbols-outlined text-[16px] text-primary-fixed-dim">zoom_in</span> Click to enlarge
+          </span>
+        </div>
+      </div>
+    </div>
+
+      <p class="font-body-md text-body-md text-on-surface-variant mb-3 opacity-90 leading-relaxed">Created an e-waste awareness video task highlighting the environmental impact of electronic waste and responsible disposal practices.</p>
+      <div class="flex flex-wrap gap-2"><span class="font-label-sm text-[11px] uppercase tracking-widest text-on-surface-variant border border-outline-variant px-2 py-0.5 bg-surface-container-low">Video</span><span class="font-label-sm text-[11px] uppercase tracking-widest text-on-surface-variant border border-outline-variant px-2 py-0.5 bg-surface-container-low">Awareness</span><span class="font-label-sm text-[11px] uppercase tracking-widest text-on-surface-variant border border-outline-variant px-2 py-0.5 bg-surface-container-low">E-Waste</span></div>
+      
+    </article>
+  
+
+    <article class="border border-slate-800 bg-surface-container p-4 sm:p-6 relative rounded-none hover:border-outline-variant transition-colors border-l-4 border-l-primary-fixed-dim/30 hover:border-l-primary-fixed-dim shadow-lg">
+      <div class="flex justify-between items-start mb-2">
+        <span class="font-data-display text-[12px] px-2 py-0.5 border text-primary-fixed-dim border-primary-fixed-dim/40 bg-primary-fixed-dim/10 flex items-center gap-1.5 font-bold">
+          <span class="material-symbols-outlined text-[14px]">folder_open</span>
+          COMPLETE
+        </span>
+        <span class="font-label-sm text-label-sm text-on-surface-variant opacity-60 font-bold tracking-widest">A04</span>
+      </div>
+
+      <h3 class="font-headline-lg-mobile text-[20px] sm:text-[24px] font-bold text-primary mb-1 leading-snug"><a href="assets/pdf/device-anatomy.pdf" class="hover:text-primary-fixed-dim transition-colors" target="_blank" rel="noopener">Assignment 4: Device Anatomy</a></h3>
+      <p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-4">E-Waste Analysis // May 18, 2026</p>
+
+      
+    <div class="mb-4 border border-[#f59e0b]/40 bg-surface-container-lowest rounded-lg overflow-hidden shadow-xl">
+      <div class="flex flex-wrap items-center justify-between gap-2 px-3 py-2 border-b border-outline-variant/40 bg-surface-container-highest/80">
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-[16px] text-[#f59e0b]">auto_stories</span>
+          <span class="font-label-sm text-[11px] text-primary font-bold uppercase tracking-widest">
+            INLINE DOCUMENT // 7 PAGES
+          </span>
+          <span id="page-indicator-A04" class="ml-1 text-[11px] font-label-sm text-[#f59e0b] px-2 py-0.5 bg-[#f59e0b]/10 border border-[#f59e0b]/30 rounded">
+            PAGE 1 OF 7
+          </span>
+        </div>
+        <div class="flex items-center gap-2">
+          
+            <a href="assets/pdf/device-anatomy.pdf" target="_blank" rel="noopener"
+               class="inline-flex items-center gap-1.5 text-[11px] font-label-sm bg-[#f59e0b]/15 text-[#fbbf24] border border-[#f59e0b]/40 hover:bg-[#f59e0b]/30 px-3 py-1 rounded transition-colors uppercase tracking-widest font-semibold">
+              <span class="material-symbols-outlined text-[14px]">picture_as_pdf</span> Open Original PDF
+            </a>
+          
+        </div>
+      </div>
+
+      <div class="flex items-center gap-1.5 px-3 py-2 bg-surface-container-low/90 border-b border-outline-variant/30 overflow-x-auto">
+        <span class="text-[10px] font-label-sm text-on-surface-variant uppercase tracking-wider mr-1">JUMP TO:</span>
+        
+      <button
+        onclick="switchAssignmentPage('A04', 0)"
+        id="btn-page-A04-0"
+        class="page-tab-btn px-2.5 py-1 text-[11px] font-label-sm uppercase tracking-wider rounded border transition-all bg-primary-fixed-dim text-on-primary-fixed font-bold border-primary-fixed-dim shadow-sm"
+      >
+        P.1
+      </button>
+    
+      <button
+        onclick="switchAssignmentPage('A04', 1)"
+        id="btn-page-A04-1"
+        class="page-tab-btn px-2.5 py-1 text-[11px] font-label-sm uppercase tracking-wider rounded border transition-all bg-surface-container text-on-surface-variant border-outline-variant/60 hover:text-primary hover:border-outline"
+      >
+        P.2
+      </button>
+    
+      <button
+        onclick="switchAssignmentPage('A04', 2)"
+        id="btn-page-A04-2"
+        class="page-tab-btn px-2.5 py-1 text-[11px] font-label-sm uppercase tracking-wider rounded border transition-all bg-surface-container text-on-surface-variant border-outline-variant/60 hover:text-primary hover:border-outline"
+      >
+        P.3
+      </button>
+    
+      <button
+        onclick="switchAssignmentPage('A04', 3)"
+        id="btn-page-A04-3"
+        class="page-tab-btn px-2.5 py-1 text-[11px] font-label-sm uppercase tracking-wider rounded border transition-all bg-surface-container text-on-surface-variant border-outline-variant/60 hover:text-primary hover:border-outline"
+      >
+        P.4
+      </button>
+    
+      <button
+        onclick="switchAssignmentPage('A04', 4)"
+        id="btn-page-A04-4"
+        class="page-tab-btn px-2.5 py-1 text-[11px] font-label-sm uppercase tracking-wider rounded border transition-all bg-surface-container text-on-surface-variant border-outline-variant/60 hover:text-primary hover:border-outline"
+      >
+        P.5
+      </button>
+    
+      <button
+        onclick="switchAssignmentPage('A04', 5)"
+        id="btn-page-A04-5"
+        class="page-tab-btn px-2.5 py-1 text-[11px] font-label-sm uppercase tracking-wider rounded border transition-all bg-surface-container text-on-surface-variant border-outline-variant/60 hover:text-primary hover:border-outline"
+      >
+        P.6
+      </button>
+    
+      <button
+        onclick="switchAssignmentPage('A04', 6)"
+        id="btn-page-A04-6"
+        class="page-tab-btn px-2.5 py-1 text-[11px] font-label-sm uppercase tracking-wider rounded border transition-all bg-surface-container text-on-surface-variant border-outline-variant/60 hover:text-primary hover:border-outline"
+      >
+        P.7
+      </button>
+    
+        <button
+          onclick="toggleAllPagesView('A04')"
+          id="btn-toggle-all-A04"
+          class="ml-auto text-[10px] font-label-sm text-secondary-fixed-dim hover:text-primary uppercase tracking-widest border border-secondary-fixed-dim/40 px-2 py-1 rounded bg-secondary-fixed-dim/10 hover:bg-secondary-fixed-dim/20 transition-colors whitespace-nowrap"
+        >
+          View All 7 Pages Stacked ↓
+        </button>
+      </div>
+
+      <div id="single-page-view-A04" class="p-2 sm:p-4 bg-surface-container-lowest relative flex flex-col items-center">
+        <div class="relative w-full max-w-3xl mx-auto cursor-pointer group"
+             onclick="openImageLightbox(document.getElementById('page-img-A04').src, 'Assignment 4: Device Anatomy - Page ' + ((window.assignmentPageTrackers && window.assignmentPageTrackers['A04'] ? window.assignmentPageTrackers['A04'].current : 0) + 1))">
+          <img
+            id="page-img-A04"
+            src="assets/img/device-anatomy-page-1.jpg"
+            alt="Device Anatomy - Page 1"
+            class="w-full h-auto max-h-[850px] object-contain block mx-auto rounded border border-outline-variant/50 shadow-2xl transition-transform duration-300 group-hover:scale-[1.005]"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-background/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none rounded">
+            <span class="bg-surface/90 text-primary px-3.5 py-1.5 rounded-full text-xs font-label-sm flex items-center gap-2 shadow-2xl border border-primary-fixed-dim/60 backdrop-blur-md">
+              <span class="material-symbols-outlined text-[16px] text-primary-fixed-dim">zoom_in</span> Click to enlarge
+            </span>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between w-full max-w-3xl mt-3 pt-2 border-t border-outline-variant/30">
+          <button
+            onclick="prevAssignmentPage('A04')"
+            class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-label-sm uppercase tracking-wider text-on-surface hover:text-primary bg-surface-container border border-outline-variant rounded hover:border-primary transition-colors"
+          >
+            <span class="material-symbols-outlined text-[16px]">arrow_back</span> Prev Page
+          </button>
+          <span id="page-footer-label-A04" class="text-xs font-label-sm text-on-surface-variant font-medium">
+            Page 1 of 7
+          </span>
+          <button
+            onclick="nextAssignmentPage('A04')"
+            class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-label-sm uppercase tracking-wider text-on-surface hover:text-primary bg-surface-container border border-outline-variant rounded hover:border-primary transition-colors"
+          >
+            Next Page <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+          </button>
+        </div>
+      </div>
+
+      <div id="all-pages-view-A04" class="hidden p-3 bg-surface-container-lowest space-y-4">
+        
+          <div class="border border-outline-variant/40 rounded p-2 bg-surface-container-low">
+            <div class="flex justify-between items-center text-[11px] font-label-sm text-[#f59e0b] mb-2 px-1">
+              <span>PAGE 1 OF 7</span>
+              <a href="assets/img/device-anatomy-page-1.jpg" target="_blank" class="hover:underline flex items-center gap-1">Open Image <span class="material-symbols-outlined text-[12px]">open_in_new</span></a>
+            </div>
+            <img src="assets/img/device-anatomy-page-1.jpg" alt="Page 1" class="w-full h-auto max-h-[850px] object-contain rounded mx-auto border border-outline-variant/40" loading="lazy" />
+          </div>
+        
+          <div class="border border-outline-variant/40 rounded p-2 bg-surface-container-low">
+            <div class="flex justify-between items-center text-[11px] font-label-sm text-[#f59e0b] mb-2 px-1">
+              <span>PAGE 2 OF 7</span>
+              <a href="assets/img/device-anatomy-page-2.jpg" target="_blank" class="hover:underline flex items-center gap-1">Open Image <span class="material-symbols-outlined text-[12px]">open_in_new</span></a>
+            </div>
+            <img src="assets/img/device-anatomy-page-2.jpg" alt="Page 2" class="w-full h-auto max-h-[850px] object-contain rounded mx-auto border border-outline-variant/40" loading="lazy" />
+          </div>
+        
+          <div class="border border-outline-variant/40 rounded p-2 bg-surface-container-low">
+            <div class="flex justify-between items-center text-[11px] font-label-sm text-[#f59e0b] mb-2 px-1">
+              <span>PAGE 3 OF 7</span>
+              <a href="assets/img/device-anatomy-page-3.jpg" target="_blank" class="hover:underline flex items-center gap-1">Open Image <span class="material-symbols-outlined text-[12px]">open_in_new</span></a>
+            </div>
+            <img src="assets/img/device-anatomy-page-3.jpg" alt="Page 3" class="w-full h-auto max-h-[850px] object-contain rounded mx-auto border border-outline-variant/40" loading="lazy" />
+          </div>
+        
+          <div class="border border-outline-variant/40 rounded p-2 bg-surface-container-low">
+            <div class="flex justify-between items-center text-[11px] font-label-sm text-[#f59e0b] mb-2 px-1">
+              <span>PAGE 4 OF 7</span>
+              <a href="assets/img/device-anatomy-page-4.jpg" target="_blank" class="hover:underline flex items-center gap-1">Open Image <span class="material-symbols-outlined text-[12px]">open_in_new</span></a>
+            </div>
+            <img src="assets/img/device-anatomy-page-4.jpg" alt="Page 4" class="w-full h-auto max-h-[850px] object-contain rounded mx-auto border border-outline-variant/40" loading="lazy" />
+          </div>
+        
+          <div class="border border-outline-variant/40 rounded p-2 bg-surface-container-low">
+            <div class="flex justify-between items-center text-[11px] font-label-sm text-[#f59e0b] mb-2 px-1">
+              <span>PAGE 5 OF 7</span>
+              <a href="assets/img/device-anatomy-page-5.jpg" target="_blank" class="hover:underline flex items-center gap-1">Open Image <span class="material-symbols-outlined text-[12px]">open_in_new</span></a>
+            </div>
+            <img src="assets/img/device-anatomy-page-5.jpg" alt="Page 5" class="w-full h-auto max-h-[850px] object-contain rounded mx-auto border border-outline-variant/40" loading="lazy" />
+          </div>
+        
+          <div class="border border-outline-variant/40 rounded p-2 bg-surface-container-low">
+            <div class="flex justify-between items-center text-[11px] font-label-sm text-[#f59e0b] mb-2 px-1">
+              <span>PAGE 6 OF 7</span>
+              <a href="assets/img/device-anatomy-page-6.jpg" target="_blank" class="hover:underline flex items-center gap-1">Open Image <span class="material-symbols-outlined text-[12px]">open_in_new</span></a>
+            </div>
+            <img src="assets/img/device-anatomy-page-6.jpg" alt="Page 6" class="w-full h-auto max-h-[850px] object-contain rounded mx-auto border border-outline-variant/40" loading="lazy" />
+          </div>
+        
+          <div class="border border-outline-variant/40 rounded p-2 bg-surface-container-low">
+            <div class="flex justify-between items-center text-[11px] font-label-sm text-[#f59e0b] mb-2 px-1">
+              <span>PAGE 7 OF 7</span>
+              <a href="assets/img/device-anatomy-page-7.jpg" target="_blank" class="hover:underline flex items-center gap-1">Open Image <span class="material-symbols-outlined text-[12px]">open_in_new</span></a>
+            </div>
+            <img src="assets/img/device-anatomy-page-7.jpg" alt="Page 7" class="w-full h-auto max-h-[850px] object-contain rounded mx-auto border border-outline-variant/40" loading="lazy" />
+          </div>
+        
+      </div>
+    </div>
+
+      <p class="font-body-md text-body-md text-on-surface-variant mb-3 opacity-90 leading-relaxed">Detailed analysis of device anatomy — exploring internal components, material composition, hazards, and recyclability of electronic devices.</p>
+      <div class="flex flex-wrap gap-2"><span class="font-label-sm text-[11px] uppercase tracking-widest text-on-surface-variant border border-outline-variant px-2 py-0.5 bg-surface-container-low">Device Anatomy</span><span class="font-label-sm text-[11px] uppercase tracking-widest text-on-surface-variant border border-outline-variant px-2 py-0.5 bg-surface-container-low">PDF Report</span><span class="font-label-sm text-[11px] uppercase tracking-widest text-on-surface-variant border border-outline-variant px-2 py-0.5 bg-surface-container-low">Hardware Analysis</span><span class="font-label-sm text-[11px] uppercase tracking-widest text-on-surface-variant border border-outline-variant px-2 py-0.5 bg-surface-container-low">7 Pages</span></div>
+      
+    </article>
+  
+
+    <article class="border border-slate-800 bg-surface-container p-4 sm:p-6 relative rounded-none hover:border-outline-variant transition-colors border-l-4 border-l-primary-fixed-dim/30 hover:border-l-primary-fixed-dim shadow-lg">
+      <div class="flex justify-between items-start mb-2">
+        <span class="font-data-display text-[12px] px-2 py-0.5 border text-primary-fixed-dim border-primary-fixed-dim/40 bg-primary-fixed-dim/10 flex items-center gap-1.5 font-bold">
+          <span class="material-symbols-outlined text-[14px]">folder_open</span>
+          COMPLETE
+        </span>
+        <span class="font-label-sm text-label-sm text-on-surface-variant opacity-60 font-bold tracking-widest">A05</span>
+      </div>
+
+      <h3 class="font-headline-lg-mobile text-[20px] sm:text-[24px] font-bold text-primary mb-1 leading-snug"><a href="https://e-waste-dashboard-kappa.vercel.app/" class="hover:text-primary-fixed-dim transition-colors" target="_blank" rel="noopener">Assignment 5: Analysis Dashboard</a></h3>
+      <p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-4">E-Waste Data Visualization // Jun 25, 2026</p>
+
+      
+    <div class="mb-5 border-2 border-secondary-fixed-dim/40 bg-surface-container-lowest rounded-lg overflow-hidden shadow-2xl">
+      <div class="p-4 bg-gradient-to-r from-surface-container-high via-surface-container to-surface-container-high border-b border-secondary-fixed-dim/30">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div>
+            <div class="flex items-center gap-2 mb-1.5">
+              <span class="w-2.5 h-2.5 rounded-full bg-[#00e471] animate-pulse"></span>
+              <span class="font-label-sm text-[11px] uppercase tracking-widest text-[#00e471] font-bold">
+                LIVE PRODUCTION WEB APP
+              </span>
+              <span class="text-[10px] font-label-sm bg-surface-container-highest px-2 py-0.5 rounded text-secondary-fixed-dim border border-secondary-fixed-dim/30">
+                VERCEL DEPLOYMENT
+              </span>
+            </div>
+            <div class="flex items-center gap-2 mt-1">
+              <span class="material-symbols-outlined text-secondary-fixed-dim text-[18px]">link</span>
+              <a href="https://e-waste-dashboard-kappa.vercel.app/" target="_blank" rel="noopener"
+                 class="font-label-sm text-[14px] sm:text-[16px] text-secondary-fixed-dim hover:text-primary font-bold underline underline-offset-4 break-all transition-colors">
+                https://e-waste-dashboard-kappa.vercel.app/
+              </a>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-2 shrink-0">
+            <a href="https://e-waste-dashboard-kappa.vercel.app/" target="_blank" rel="noopener"
+               class="inline-flex items-center justify-center gap-2 bg-secondary-fixed-dim text-[#001f24] hover:bg-primary font-label-sm text-[12px] font-bold uppercase tracking-wider px-4 py-2.5 rounded shadow-lg transition-all transform hover:-translate-y-0.5">
+              <span>Open Vercel App</span>
+              <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+            </a>
+            <button
+              onclick="navigator.clipboard.writeText('https://e-waste-dashboard-kappa.vercel.app/'); this.textContent = 'Copied!'; setTimeout(() => this.textContent = 'Copy', 1500);"
+              class="font-label-sm text-[11px] text-on-surface-variant hover:text-primary border border-outline-variant px-3 py-2 rounded bg-surface-container hover:bg-surface-container-highest transition-colors uppercase tracking-wider"
+              title="Copy URL"
+            >
+              Copy
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-outline-variant/30">
+        <div class="flex items-center justify-between px-3 py-1.5 bg-surface-container-highest/60 border-b border-outline-variant/30 text-[10px] font-label-sm text-on-surface-variant">
+          <div class="flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-[14px] text-secondary-fixed-dim">preview</span>
+            <span class="uppercase tracking-widest">LIVE EMBEDDED PREVIEW</span>
+          </div>
+          <span class="opacity-70">Interactive inside container</span>
+        </div>
+        <div class="relative w-full bg-surface-container-lowest" style="height: 650px;">
+          <iframe
+            src="https://e-waste-dashboard-kappa.vercel.app/"
+            title="Assignment 5: Analysis Dashboard"
+            class="w-full h-full border-0"
+            loading="lazy"
+            allow="fullscreen; clipboard-write"
+            style="height: 650px;"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+
+      <p class="font-body-md text-body-md text-on-surface-variant mb-3 opacity-90 leading-relaxed">Interactive e-waste analysis dashboard deployed on Vercel — featuring real-time data visualisations, statistics, and sustainability metrics across regions.</p>
+      <div class="flex flex-wrap gap-2"><span class="font-label-sm text-[11px] uppercase tracking-widest text-on-surface-variant border border-outline-variant px-2 py-0.5 bg-surface-container-low">Analysis Dashboard</span><span class="font-label-sm text-[11px] uppercase tracking-widest text-on-surface-variant border border-outline-variant px-2 py-0.5 bg-surface-container-low">Live Web App</span><span class="font-label-sm text-[11px] uppercase tracking-widest text-on-surface-variant border border-outline-variant px-2 py-0.5 bg-surface-container-low">Vercel</span><span class="font-label-sm text-[11px] uppercase tracking-widest text-on-surface-variant border border-outline-variant px-2 py-0.5 bg-surface-container-low">Visualization</span></div>
+      
+    </article>
+  
   </section>
 
   <div id="assignments-empty" class="hidden border border-dashed border-outline-variant p-6 text-center mb-4">
@@ -118,6 +543,6 @@
 </div>
 
 <script src="assets/js/site.js"></script>
-<script src="assets/js/dashboard.js"></script>
+<script src="assets/js/dashboard.js?v=4.0"></script>
 </body>
 </html>

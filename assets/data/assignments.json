@@ -7,6 +7,7 @@
     "status": "COMPLETE",
     "tags": ["Crossword", "E-Waste", "Interactive"],
     "summary": "Completed the E-Waste Mastermind crossword puzzle exploring e-waste terms, recycling practices, and state-wise statistics.",
+    "type": "image",
     "image": "assets/img/crossword.jpg",
     "link": ""
   },
@@ -18,7 +19,53 @@
     "status": "COMPLETE",
     "tags": ["Quiz", "Assessment", "100% Accuracy"],
     "summary": "Completed the E-waste recycling summary quiz on Wayground, achieving Rank 2/60 with a score of 6900 and 100% accuracy.",
+    "type": "image",
     "image": "assets/img/quiz.jpg",
     "link": ""
+  },
+  {
+    "id": "A03",
+    "title": "Assignment 3: Video Task",
+    "course": "E-Waste Awareness",
+    "date": "2026-04-10",
+    "status": "COMPLETE",
+    "tags": ["Video", "Awareness", "E-Waste"],
+    "summary": "Created an e-waste awareness video task highlighting the environmental impact of electronic waste and responsible disposal practices.",
+    "type": "image",
+    "image": "assets/img/Video task.jpeg",
+    "link": ""
+  },
+  {
+    "id": "A04",
+    "title": "Assignment 4: Device Anatomy",
+    "course": "E-Waste Analysis",
+    "date": "2026-05-18",
+    "status": "COMPLETE",
+    "tags": ["Device Anatomy", "PDF Report", "Hardware Analysis", "7 Pages"],
+    "summary": "Detailed analysis of device anatomy — exploring internal components, material composition, hazards, and recyclability of electronic devices.",
+    "type": "pdf-pages",
+    "pdf": "assets/pdf/device-anatomy.pdf",
+    "pages": [
+      "assets/img/device-anatomy-page-1.jpg",
+      "assets/img/device-anatomy-page-2.jpg",
+      "assets/img/device-anatomy-page-3.jpg",
+      "assets/img/device-anatomy-page-4.jpg",
+      "assets/img/device-anatomy-page-5.jpg",
+      "assets/img/device-anatomy-page-6.jpg",
+      "assets/img/device-anatomy-page-7.jpg"
+    ],
+    "link": "assets/pdf/device-anatomy.pdf"
+  },
+  {
+    "id": "A05",
+    "title": "Assignment 5: Analysis Dashboard",
+    "course": "E-Waste Data Visualization",
+    "date": "2026-06-25",
+    "status": "COMPLETE",
+    "tags": ["Analysis Dashboard", "Live Web App", "Vercel", "Visualization"],
+    "summary": "Interactive e-waste analysis dashboard deployed on Vercel — featuring real-time data visualisations, statistics, and sustainability metrics across regions.",
+    "type": "iframe",
+    "embedUrl": "https://e-waste-dashboard-kappa.vercel.app/",
+    "link": "https://e-waste-dashboard-kappa.vercel.app/"
   }
 ]
