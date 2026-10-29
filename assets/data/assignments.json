@@ -67,5 +67,143 @@
     "type": "iframe",
     "embedUrl": "https://e-waste-dashboard-kappa.vercel.app/",
     "link": "https://e-waste-dashboard-kappa.vercel.app/"
+  },
+  {
+    "id": "A06",
+    "title": "Assignment 6: E-Waste Hackathon",
+    "course": "Smart E-Waste Systems & Hackathon Project",
+    "date": "2026-07-15",
+    "status": "COMPLETE",
+    "tags": ["Hackathon", "E-Waste", "ReMat Platform", "AI Detection", "Live Web App", "Vercel"],
+    "summary": "Smart e-waste recycling platform built for hackathon competition — featuring AI-powered waste detection, smart bin network tracking, Groq AI assistant, and gamified recycling rewards deployed live on Vercel.",
+    "type": "iframe",
+    "embedUrl": "https://remat-e-waste.vercel.app/",
+    "link": "https://remat-e-waste.vercel.app/"
+  },
+  {
+    "id": "A07",
+    "title": "Assignment 7: E-Waste Awareness Campaign",
+    "course": "Community Outreach & Sustainability Drive",
+    "date": "2026-08-05",
+    "status": "COMPLETE",
+    "role": "Myth Buster Quiz Host",
+    "tags": ["Campaign", "Myth Busters", "Quiz Host", "Outreach", "Poster Series", "Interactive"],
+    "summary": "Spearheaded the campus E-Waste Awareness Campaign as the official Myth Buster Quiz Host — actively educating and engaging participants through live myth-busting sessions and an original 5-part research-backed visual poster series addressing common misconceptions about electronics disposal.",
+    "type": "campaign-showcase",
+    "posters": [
+      {
+        "id": "myth-06",
+        "number": "MYTH 06",
+        "title": "Tiny Gadgets",
+        "myth": "A single wireless earbud is too small to count as e-waste.",
+        "truth": "Small Device. Big Impact. Contains critical lithium, cobalt, and toxic components.",
+        "image": "assets/img/myth-06-tiny-gadgets.png"
+      },
+      {
+        "id": "myth-07",
+        "number": "MYTH 07",
+        "title": "Gold in Phones",
+        "myth": "Every old smartphone contains enough gold to buy a new smartphone.",
+        "truth": "Precious Materials Deserve a Second Life — only trace amounts, viable at industrial scale.",
+        "image": "assets/img/myth-07-gold-in-phones.jpg"
+      },
+      {
+        "id": "myth-08",
+        "number": "MYTH 08",
+        "title": "Working Electronics",
+        "myth": "A device cannot be e-waste if it still switches on.",
+        "truth": "Working Doesn't Mean Worthless — repair, refurbish, or recycle responsibly.",
+        "image": "assets/img/myth-08-working-electronics.jpg"
+      },
+      {
+        "id": "myth-09",
+        "number": "MYTH 09",
+        "title": "Perfect Recycling",
+        "myth": "Recycling centres recover 100% of every electronic device.",
+        "truth": "Recycling Isn't Perfect — But It Matters. Proper e-waste facilities maximize recovery.",
+        "image": "assets/img/myth-09-perfect-recycling.jpg"
+      },
+      {
+        "id": "myth-10",
+        "number": "MYTH 10",
+        "title": "Old Chargers",
+        "myth": "Old chargers are just cables, so they aren't e-waste.",
+        "truth": "A Charger Is Electronics Too — packed with circuit boards and recoverable copper.",
+        "image": "assets/img/myth-10-old-chargers.jpg"
+      }
+    ],
+    "eventPhotos": [
+      {
+        "id": "photo-01",
+        "title": "Team Briefing & Poster Review",
+        "caption": "Students and coordinators examining the newly printed E-Waste Myth Busters posters and informational flyers before the live quiz drive.",
+        "thumb": "assets/event/thumb_IMG_0271.jpg",
+        "full": "assets/event/full_IMG_0271.jpg",
+        "tag": "TEAM & POSTERS"
+      },
+      {
+        "id": "photo-02",
+        "title": "Devangini Hosting Faculty & Students",
+        "caption": "Devangini actively engaging faculty members and students at the awareness kiosk, introducing the Myth Busters quiz game and explaining proper disposal routes.",
+        "thumb": "assets/event/thumb_IMG_0295.jpg",
+        "full": "assets/event/full_IMG_0295.jpg",
+        "tag": "QUIZ HOST IN ACTION"
+      },
+      {
+        "id": "photo-03",
+        "title": "Interactive Discussion at the Kiosk",
+        "caption": "Deep-dive discussions at the campaign table with students analyzing the 5 myth posters and debunking misconceptions around working electronics.",
+        "thumb": "assets/event/thumb_IMG_0303.jpg",
+        "full": "assets/event/full_IMG_0303.jpg",
+        "tag": "LIVE ENGAGEMENT"
+      },
+      {
+        "id": "photo-04",
+        "title": "Audience Scanning E-Waste IQ Quiz",
+        "caption": "A participant scanning the live E-Waste IQ QR code on mobile to participate in the interactive quiz challenges hosted during the campaign.",
+        "thumb": "assets/event/thumb_IMG_0361.jpg",
+        "full": "assets/event/full_IMG_0361.jpg",
+        "tag": "QR CODE SCAN"
+      }
+    ],
+    "eventVideos": [
+      {
+        "id": "video-01",
+        "title": "Live Quiz Session — Kickoff",
+        "caption": "Devangini presenting e-waste myth busting questions to gathered students at the campaign kiosk.",
+        "src": "assets/event/IMG_0285.mp4",
+        "mov": "assets/event/IMG_0285.mov",
+        "poster": "assets/event/thumb_IMG_0295.jpg",
+        "duration": "Clip 01"
+      },
+      {
+        "id": "video-02",
+        "title": "Participant Discussion & Reaction",
+        "caption": "Students engaging with the quiz challenges and reacting to surprising facts about gold in smartphones.",
+        "src": "assets/event/IMG_0293.mp4",
+        "mov": "assets/event/IMG_0293.mov",
+        "poster": "assets/event/thumb_IMG_0303.jpg",
+        "duration": "Clip 02"
+      },
+      {
+        "id": "video-03",
+        "title": "Interactive Myth Buster Round",
+        "caption": "Live voting round where participants guess whether tiny earbuds and chargers count as e-waste.",
+        "src": "assets/event/IMG_0300.mp4",
+        "mov": "assets/event/IMG_0300.mov",
+        "poster": "assets/event/thumb_IMG_0361.jpg",
+        "duration": "Clip 03"
+      },
+      {
+        "id": "video-04",
+        "title": "Revealing the Science & Wrap-up",
+        "caption": "Unveiling the science behind certified recycling centers and responsible electronic waste disposal.",
+        "src": "assets/event/IMG_0302.mp4",
+        "mov": "assets/event/IMG_0302.mov",
+        "poster": "assets/event/thumb_IMG_0271.jpg",
+        "duration": "Clip 04"
+      }
+    ],
+    "link": ""
   }
 ]
